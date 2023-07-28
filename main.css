@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --clr-primary-bg: #1E5AFA;
+    --clr-white: #fff;
+
+    --clr-neutral-100: #000F37;
+    /*Secondary headings text color, button bg*/
+    --clr-neutral-200: #313131;
+    /*Primary headings text color*/
+    --clr-neutral-300: #575757;
+    /*paragraphs text color*/
+    --clr-neutral-400: #5F7285;
+    /*Testimonials paragraph color*/
+
+
+    --color-white: #fff;
+    --color-light:#f4f4f4;
+    --color-black: #000f37;
+    --color-dark: #575757;
+
+    --testimonial-customer: #1B263D;
+    --testimonial-job: #9C9EA3;
+    --testimonial-bg: #E7EBEE;
+
+    --minus-icon-clr: #FD5757;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+
+    --fs-body: 1.125rem;
+    /*18px*/
+    --fs-logo: 2rem;
+    --fs-primary-headers: 5.3125rem;
+    /*85px*/
+    --fs-paragraphs: 1.25rem;
+    /*20px*/
+    --fs-secondary-headers: 2.875rem;
+    /* 46px */
+
+    --size-100: 0.25rem;
+    --size-200: 0.5rem;
+    --size-300: 0.75rem;
+    --size-400: 1rem;
+    --size-500: 1.25rem;
+    --size-600: 2rem;
+    --size-700: 3rem;
+    --size-800: 4rem;
+    --size-900: 5rem;
+
+    --transition: all 0.5s ease;
+
+    --container-width: 84%;
+    --container-width-tablet: 90%;
+    --container-width-phone: 94%;
+
+    --section-padding-bottom: 12rem;
+    --section-padding-bottom-mobile: 8rem
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--fs-body);
+    color: var(--color-black);
+}
+p {
+    font-size: var(--fs-body);
+    font-weight: var(--fw-light);
+    text-align: center;
+    margin: auto;
+}
+
+/* general styling */
+.lead {
+    width: 63%;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 1.5rem auto 3rem;
+}
+a {
+    color: var(--clr-white);
+    font-weight: 300;
+}
+img {
+    width: 100%;
+}
+.btn {
+    display: inline-block;
+    padding: 1rem 2.3rem;
+    background-color: var(--clr-white);
+    color: var(--color-black);
+    font-weight: 500;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+.btn-primary:hover,
+.btn:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-black);
+}
+.avatar {
+    width: 2.2rem;
+    height: 2.2rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+section {
+    max-width: 100vw;
+    padding-bottom: var(--section-padding-bottom);
+}
+
+/* end of general styling */
+
+.container {
+    width: var(--container-width);
+    margin: 0 auto;
+}
+
+/* navbar */
+nav {
+    width: 100vw;
+    height: 6rem;
+    /* position: fixed; */
+    display: grid;
+    place-items: center;
+    /* The use of the grid here is to align the .nav__container in it's
+    parent -- the nav . */
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: var(--clr-primary-bg);
+}
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: var(--clr-primary-bg); */
+}
+nav button {
+    display: none;
+}
+/* The above code is to hide the buttons to be used in the mobile design */
+.links {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.nav__logo {
+    font-size: 2rem;
+    font-weight: bold;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+.nav__signin-signup {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* end of navbar */
+/* header */
+header {
+    background-color: var(--clr-primary-bg);
+    color: var(--clr-white);
+    min-height: 790px;
+    padding-top: 5rem;
+}
+.heading {
+    font-size: var(--fs-primary-headers);
+    font-weight: var(--fw-bold);
+    text-align: center;
+    color: inherit;
+}
+.header__img {
+    margin-top: -25%;
+    max-width: 1000px;
+    margin-inline: auto;
+}
+/* floating line */
+.header__floating-line {
+    position: absolute;
+    top: 62rem;
+    right: 0rem;
+    z-index: -1;
+}
+/* scroll down arrow */
+a.scrolldown-arrow img {
+    width: 10vw;
+    position: absolute;
+    right: 3rem;
+    top: 57rem;
+}
+/* download buttons */
+.to-download {
+    width: 47rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.to-download img {
+    width: 20rem;
+    cursor: pointer
+}
+/* about section */
+.about__container .heading {
+    margin-bottom: 20rem;
+}
+
+article.section__content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+.section__content-container div.image {
+    background-image: url('images/Rectangle\ 709.svg');
+    background-repeat: no-repeat;
+    min-width: 500px;
+    /* The width here is to minify the size of the rectangle imported
+    so that the next component to it can be displayed well .  */
+}
+.section__content-container div.image img {
+    width: 1071px;
+    height: 1060px;
+    position: relative;
+    margin-left: -45%;
+    margin-top: -82%;
+    /* This is the actual height of the image , you can get it by hovering
+    over the image source in the browser.  */
+}
+.flow * + * {
+    margin-top: 35px;
+}
+.description {
+    margin-top: -5rem;
+    /* The margin-top is to pull the box a bit to top */
+    z-index: 2;
+    /* The z-index is because the phone image dimensions are so big
+    that they cover the elements in the document (I hover over the button
+    but there is no hover effect because the image dimensions are so
+    big that the image is covering the button --altough this is not
+    appearing visually ). */
+}
+.description__heading {
+    font-size: var(--fs-secondary-headers);
+    font-weight: var(--fw-semi-bold);
+}
+.description p {
+    color: var(--color-dark);
+}
+.reverse-order {
+    order: 2
+}
+/* clients */
+.clients__images {
+    /* background-color: #eee; */
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    border-radius: 5rem;
+    width: 100%;
+}
+.clients__images div.img-container{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 250px;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 5px 25px 8px #9f9e9e;
+}
+.clients__images div.img-container:first-child img {
+    width: 200px;
+    height: 85px;
+}
+.clients__images div.img-container:first-child {
+    margin-top: 2.5rem;
+}
+.clients__container p {
+    width: 60%;
+}
+
