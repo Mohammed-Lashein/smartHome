@@ -74,6 +74,9 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: var(--fs-body);
     color: var(--color-black);
+    /* overflow-x: hidden; */
+    /* The above property is important because the floating line
+    creates an extra space (unnecessarily) on the x-axis */
 }
 
 p {
@@ -270,7 +273,7 @@ article.section__content-container {
     height: 1060px;
     position: relative;
     margin-left: -45%;
-    margin-top: -82%;
+    margin-top: -75%;
     /* This is the actual height of the image , you can get it by hovering
     over the image source in the browser.  */
 }
@@ -308,6 +311,8 @@ article.section__content-container {
     /* background-color: #eee; */
     padding: 2rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
     border-radius: 5rem;
@@ -467,4 +472,26 @@ do the changes required to every element in the question container . */
     gap: 1rem;
     justify-content: space-between;
     align-items: center;
+}
+
+/* download app section */
+.download__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10rem;
+    text-align: left;
+}
+.download__container__image {
+    width: 1071px;
+    height: 1061px;
+    position: relative;
+    margin-left: -35%;
+    margin-top: -22%;
+} 
+.download__container .heading {
+    padding-left: 10rem;
+    text-align: left;
+}
+.download__container .to-download {
+    justify-content: center;
 }
