@@ -117,6 +117,7 @@ img {
 
 .btn-primary {
     background-color: var(--color-black);
+    font-size: inherit;
     color: var(--color-white);
     border: 1px solid transparent;
     transition: var(--transition);
@@ -362,6 +363,13 @@ article.section__content-container {
     aspect-ratio: 1 / 0.2;
     border-radius: 2rem;
     padding: 1rem 3rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+.testimonials__container article:hover {
+    background-color: var(--clr-white);
+    border-color: var(--color-black);
+    box-shadow: 5px 5px 20px 10px rgba(0,0,0,0.1);
 }
 
 .testimonial {
@@ -457,7 +465,7 @@ article.section__content-container {
 }
 .question.active p {
     display: block;
-    margin-left: 26.5%;
+    margin-left: 24%;
 }
 /* A good approach from wes bos : He said in the video of fixed nav that
 on toggling css classes using js , he likes to add the class on the parent
@@ -480,6 +488,9 @@ do the changes required to every element in the question container . */
     grid-template-columns: 1fr 1fr;
     column-gap: 10rem;
     text-align: left;
+    padding-bottom: 0;
+    /* This padding-bottom here is to override the given bottom padding
+    by the general container class .  */
 }
 .download__container__image {
     width: 1071px;
@@ -494,4 +505,56 @@ do the changes required to every element in the question container . */
 }
 .download__container .to-download {
     justify-content: center;
+}
+/* subscription container */
+.subscription__container {
+    background-color: var(--clr-primary-bg);
+    color: var(--clr-white);
+    padding: 5rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+.subscription__container .heading {
+    font-size: var(--fs-secondary-headers);
+    text-align: left;
+    margin-bottom: 2rem;
+}
+.subscription__container .btn-primary {
+    width: 220px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    color: inherit;
+    background-color: inherit;
+    margin-left: auto;
+    margin-top: 1rem;
+    border: 1px solid var(--color-white);
+    transition: var(--transition);
+}
+.subscription__container .btn-primary a {
+    color: inherit;
+}
+.subscription__container .btn-primary:hover {
+    background-color: var(--clr-white);
+    color: var(--color-black);
+    border-color: var(--color-black);
+}
+/* footer */
+footer {
+    color: var(--color-black);
+}
+footer  * {
+    color: inherit;
+}
+.footer__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+}
+.footer__part-one,
+.footer__part-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
 }

@@ -10,5 +10,4 @@ questions.forEach((question) => {
         question.classList.toggle('active');
     }
 })
-
 // Event listeners
