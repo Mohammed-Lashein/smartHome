@@ -10,8 +10,7 @@ console.log(nav);
 
 // FAQs 
 questions.forEach((question) => {
-    const toggleBtn = question.querySelector('.question-btn');
-    toggleBtn.addEventListener('click', handleActiveClass);
+    question.addEventListener('click', handleActiveClass);
     function handleActiveClass() {
         question.classList.toggle('active');
     }
