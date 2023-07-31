@@ -68,6 +68,7 @@ linksListChildren.forEach((link) => {
         const position = element.offsetTop;
         window.scrollTo({
             top: position - nav.getBoundingClientRect().height,
+            behavior: 'smooth',
         })
     })
 })

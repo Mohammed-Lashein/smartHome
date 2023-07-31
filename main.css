@@ -74,7 +74,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: var(--fs-body);
     color: var(--color-black);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     /* The above property is important because the floating line
     creates an extra space (unnecessarily) on the x-axis */
 }
@@ -837,8 +837,15 @@ footer .title {
         display: none;
     }
 
+    img:not(div.img-container img) {
+        display: none;
+    }
+
     /* about */
-    .about__container .heading {margin-bottom: 0;}
+    .about__container .heading {
+        margin-bottom: 0;
+    }
+
     .about__container div.image {
         margin-top: 15rem;
     }
@@ -846,6 +853,7 @@ footer .title {
     .about__container div.image img {
         max-width: 70rem;
     }
+
     .section__content-container div.image img {
         margin-left: -45%;
     }
@@ -854,7 +862,10 @@ footer .title {
         /* margin-bottom: 10rem; */
         text-align: center;
     }
-    .reverse-order {grid-row: 1;}
+
+    .reverse-order {
+        grid-row: 1;
+    }
 
     /* .reverse-order+.description {
         order: 2;
@@ -876,10 +887,12 @@ footer .title {
         grid-template-rows: 1fr 1fr;
         margin-left: -2rem;
     }
+
     .download__container__image {
         left: -5rem;
         top: 25rem;
     }
+
     .download__container .lead {
         max-width: 70%;
         margin-inline: auto;
@@ -901,10 +914,12 @@ footer .title {
         covers this container , so I can't deal with the btn . And this
         is a problem in the assets of this project .  */
     }
+
     .subscription__container .info,
     .subscription__container .heading {
         text-align: center;
     }
+
     .subscription__container .btn-primary {
         margin-inline: auto;
     }
