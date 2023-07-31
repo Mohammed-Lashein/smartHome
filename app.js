@@ -5,7 +5,12 @@ const questions = document.querySelectorAll('.question');
 const spanDate = document.querySelector('.date');
 
 const nav = document.querySelector('.nav');
-console.log(nav);
+const header = document.querySelector('header');
+console.log(header);
+
+const linksList = document.querySelector('ul.links');
+const menuBars = document.querySelector('.menu-bars');
+const closeBtn = document.querySelector('.close');
 // Functions
 
 // FAQs 
@@ -20,15 +25,26 @@ questions.forEach((question) => {
 spanDate.textContent = new Date().getFullYear();
 
 // fixing the navbar
-function handleNav() {
+function handleNavFixation() {
     if (window.scrollY >= nav.clientHeight) {
+        
         nav.style.position = 'fixed';
         nav.style.top = '0px';
-        document.body.style.paddingTop = nav.clientHeight + 'px';
     } else {
         nav.style.position = 'block';
-        document.body.style.paddingTop = '0';
+    }
+}
+
+// showing and hiding nav menu on tablets
+function toggleNav() {
+    if (menuBars.classList.contains('active') || closeBtn.classList.contains('active')) {
+        menuBars.classList.toggle('active');
+        closeBtn.classList.toggle('active');
+        linksList.classList.toggle('hide');
+
     }
 }
 // Event listeners
-window.addEventListener('scroll', handleNav);
+window.addEventListener('scroll', handleNavFixation);
+menuBars.addEventListener('click', toggleNav);
+closeBtn.addEventListener('click', toggleNav);
