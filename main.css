@@ -646,12 +646,13 @@ footer .title {
 }
 
 /* media queries for (Tablets) */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 900px) {
+    
     .container {
         width: var(--container-width-tablet);
     }
 
-    h1 {
+    .heading {
         font-size: 4.2rem;
     }
 
@@ -737,11 +738,28 @@ footer .title {
         display: none;
     }
 
+    a.scrolldown-arrow img {
+        display: none;
+    }
+
+
     header~.to-download {
         /* At first , I used the adjacent sibling combinator (+),
         but it didn't work because it works only on adjacent siblings,
         so the selector to use here is the general sibling combinator */
         margin-top: -6rem;
+    }
+
+    img:not(div.img-container img) {
+        display: none;
+    }
+
+    .to-download {
+        display: none !important;
+    }
+
+    .to-download img {
+        display: none;
     }
 
     /* about */
@@ -750,13 +768,10 @@ footer .title {
     }
 
     article.section__content-container {
-        gap: 1rem;
+        grid-template-columns: 1fr;
+        margin-bottom: 8rem
     }
 
-    .section__content-container div.image img {
-        margin-left: -55%;
-        margin-top: -65%;
-    }
 
     /* testimonials */
     .testimonials__container {
@@ -773,13 +788,7 @@ footer .title {
         position: relative;
     }
 
-    .download__container__image {
-        position: absolute;
-        left: 58%;
-        min-width: 8rem;
-        max-width: 600px;
-        transform: translate(45%, 5%);
-    }
+
 
     /* subscription-container */
     .subscription__container .btn-primary {
@@ -793,6 +802,7 @@ footer .title {
         text-align: center;
     }
 }
+
 
 /* media queries for (phones) */
 @media screen and (max-width: 600px) {
