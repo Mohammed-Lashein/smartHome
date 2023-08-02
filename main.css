@@ -787,6 +787,9 @@ footer .title {
         margin-left: 0;
         position: relative;
     }
+    .download__container__image {
+        width: 0;
+    }
 
 
 
